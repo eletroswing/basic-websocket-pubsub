@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== "production") {
 const PORT = process.env.PORT || 8000;
 const WSServer = new WebSocketServer({
     port: PORT,
+    host: "0.0.0.0",
     perMessageDeflate: {
         zlibDeflateOptions: {
             chunkSize: 1024,
